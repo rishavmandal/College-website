@@ -1,0 +1,203 @@
+/* ===== Global Styles ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #f8f9fa;
+}
+
+/* ===== Particle Canvas Background ===== */
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+/* ===== Header & Logo ===== */
+.main {
+    height: auto;
+    min-height: 90px;
+}
+.brand-logo-img {
+    max-height: 30px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.brand-logo-img:hover {
+    transform: scale(1.03);
+}
+
+.socialmedia {
+    padding: 5px 10px;
+}
+.socialmedia i {
+    color: #ED1C24;
+    transition: all 0.3s ease;
+}
+.socialmedia:hover i {
+    transform: scale(1.1);
+}
+
+/* ===== Navigation Menu ===== */
+.menu {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    z-index: 1020;
+}
+.menu-area ul li a {
+    color: #212529 !important;
+    font-size: 13px;
+    font-weight: 600;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    transition: all 0.2s ease-in-out;
+}
+.menu-area ul li a:hover {
+    background-color: #ED1C24;
+    color: white !important;
+    border-radius: 4px;
+}
+.navbar-nav .active > .nav-link, .navbar-nav .nav-link.active {
+    color: #ED1C24 !important;
+}
+
+.btn-apply {
+    border-radius: 30px;
+    background-color: #ED1C24;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+.btn-apply:hover {
+    background-color: #c81016;
+    color: white;
+    box-shadow: 0 4px 12px rgba(237, 28, 36, 0.4);
+}
+
+/* ===== Hero Carousel ===== */
+.area {
+    height: 500px;
+}
+.banner-img {
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(85%);
+}
+.bg-dark-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+}
+
+/* ===== Statistics Counter Section ===== */
+.stats-section {
+    background: linear-gradient(135deg, #ED1C24 0%, #a61319 100%) !important;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+.counter {
+    font-weight: 800;
+}
+
+/* ===== Admission & Headings ===== */
+.admission {
+    padding: 40px 0;
+}
+.heading span {
+    color: #ED1C24;
+}
+.heading h3 {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+#line1 {
+    height: 3px;
+    width: 80px;
+    background-color: #ED1C24;
+    display: block;
+    margin: auto;
+    margin-bottom: 4px;
+}
+#line2 {
+    height: 3px;
+    width: 50px;
+    background-color: #333;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* ===== Interactive Cards ===== */
+.cardp .card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background: #fff;
+}
+.cardp .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15) !important;
+}
+.cardp img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #191919;
+    font-size: 14px;
+}
+.Notice-board h4 {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+#notice-underline1, #notice-underline2 {
+    height: 3px;
+    width: 50px;
+    background-color: #ED1C24;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+/* ===== Animations & Reveal ===== */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(237, 28, 36, 0.6); }
+    70% { box-shadow: 0 0 0 12px rgba(237, 28, 36, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(237, 28, 36, 0); }
+}
+.pulse-btn {
+    animation: pulseGlow 2s infinite;
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media(max-width:991px) {
+    .area, .banner-img {
+        height: 350px;
+    }
+    .footer {
+        height: auto !important;
+    }
+}
